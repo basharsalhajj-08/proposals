@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GoodWatch × Black Cactus</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0e0e0f;--bg2:#141416;--ink:#f2f0ec;--muted:#8d8b87;--faint:#4a4946;--line:rgba(255,255,255,.08);--green:#12c88e}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:Manrope,"Segoe UI",system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px;padding-block:0 96px}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;margin:0;text-wrap:balance;letter-spacing:-.02em}
+a{color:inherit}
+.label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+header{display:flex;justify-content:space-between;align-items:center;height:76px;border-bottom:1px solid var(--line)}
+.mark{display:flex;align-items:center;gap:12px;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.mark svg{width:14px;height:20px}
+header .label{color:var(--faint)}
+.hero{padding:110px 0 88px;border-bottom:1px solid var(--line)}
+.hero .label{color:var(--green);margin-bottom:24px;display:block}
+.hero h1{font-size:clamp(42px,6.8vw,96px);line-height:.96;font-weight:600;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--muted)}
+.hero p{margin:36px 0 0;font-size:18px;color:var(--muted);max-width:50ch}
+.hero .row{display:flex;gap:56px;margin-top:56px;flex-wrap:wrap}
+.hero .row div{display:grid;gap:4px}
+.hero .row b{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:22px}
+.hero .row span{font-size:13px;color:var(--muted)}
+section{padding:88px 0 0}
+.sh{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:40px;align-items:start}
+.sh h2{font-size:clamp(28px,3.2vw,40px);font-weight:600;line-height:1.05}
+.sh p{margin:8px 0 0;color:var(--muted);max-width:56ch}
+.plan{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+.plan>div{padding:32px}
+.plan>div+div{border-left:1px solid var(--line)}
+.plan h3{font-size:18px;font-weight:600;margin-bottom:16px}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.plan li{display:flex;gap:12px;font-size:15px;color:var(--ink)}
+.plan li::before{content:"";width:6px;height:6px;background:var(--green);margin-top:9px;flex:0 0 auto}
+.plan li span{color:var(--muted)}
+.reel{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.clip{background:var(--bg2);border:1px solid var(--line);overflow:hidden}
+.clip .frame{aspect-ratio:9/16;max-width:100%;background:#000}
+.clip iframe{width:100%;height:100%;border:0;display:block}
+.clip .cap{padding:12px 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.more{display:inline-block;margin-top:28px;font-size:14px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--faint);padding-bottom:2px}
+.more:hover{color:var(--ink);border-color:var(--ink)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.flow div{padding:28px 24px 28px 0}
+.flow div+div{padding-left:24px;border-left:1px solid var(--line)}
+.flow h3{font-size:18px;font-weight:600;margin:14px 0 8px}
+.flow p{margin:0;color:var(--muted);font-size:14.5px}
+.offer{border:1px solid var(--line);display:grid;grid-template-columns:1.1fr .9fr}
+.offer .left{padding:40px 36px;border-right:1px solid var(--line)}
+.offer .right{padding:40px 36px;background:var(--bg2)}
+.price{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:clamp(48px,7vw,80px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price small{font-family:Manrope,sans-serif;font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:10px;white-space:normal}
+.offer .sub{margin:14px 0 0;color:var(--muted);font-size:15px}
+.offer .month{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.offer .month b{font-family:"Bricolage Grotesque",sans-serif;font-size:24px;font-weight:600;letter-spacing:-.02em}
+.offer .month span{color:var(--muted);font-size:14px}
+.spec{display:grid}
+.spec div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.spec div:first-child{padding-top:0}
+.spec div span:first-child{color:var(--muted)}
+.spec div span:last-child{font-weight:600;text-align:right}
+.spec .lead span:last-child{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.addon{margin-top:16px;border:1px solid var(--line);display:grid;grid-template-columns:1.1fr .9fr}
+.addon .left{padding:32px 36px;border-right:1px solid var(--line)}
+.addon .right{padding:32px 36px}
+.addon h3{font-size:22px;font-weight:600;margin:6px 0 10px}
+.addon .p{font-family:"Bricolage Grotesque",sans-serif;font-size:36px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.addon .p small{font-family:Manrope,sans-serif;font-size:14px;font-weight:500;color:var(--muted);margin-left:8px}
+.addon p{margin:0;color:var(--muted);font-size:14.5px}
+.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.terms b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
+.terms span{font-size:14px}
+.next{margin-top:40px;padding:28px 32px;border:1px solid var(--line);font-size:15px;color:var(--muted)}
+.next b{color:var(--ink);font-weight:600}
+.close{margin-top:120px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;padding-top:40px;border-top:1px solid var(--line)}
+.close h2{font-size:clamp(36px,5vw,64px);font-weight:600;line-height:1;letter-spacing:-.03em}
+.close p{margin:16px 0 0;color:var(--muted)}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:18px 28px}
+.btn:hover{background:var(--green)}
+footer{margin-top:48px;display:flex;justify-content:space-between;font-size:12px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;flex-wrap:wrap;gap:8px}
+@media (max-width:900px){
+  .hero{padding:80px 0 64px}
+  .sh{grid-template-columns:1fr;gap:12px}
+  .plan{grid-template-columns:1fr}
+  .plan>div+div{border-left:0;border-top:1px solid var(--line)}
+  .reel{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow div{border-top:1px solid var(--line);padding:24px 0}
+  .flow div+div{padding-left:0;border-left:0}
+  .flow div:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}
+  .offer,.addon{grid-template-columns:1fr}
+  .offer .left,.addon .left{border-right:0;border-bottom:1px solid var(--line)}
+  .terms{grid-template-columns:1fr 1fr}
+  .close{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .reel{grid-template-columns:1fr;justify-items:center}
+  .clip{width:100%;max-width:320px}
+  .flow{grid-template-columns:1fr}
+  .flow div:nth-child(even){padding-left:0;border-left:0}
+  .terms{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">
+    <svg viewBox="0 0 14 20" aria-hidden="true"><rect x="5.5" y="0" width="3" height="20" fill="#12c88e"/><rect x="0" y="6" width="3" height="9" fill="#12c88e"/><rect x="11" y="4" width="3" height="9" fill="#12c88e"/></svg>
+    Black Cactus
+  </div>
+  <div class="label">Proposal for GoodWatch · Sept 2026</div>
+</header>
+
+<div class="hero">
+  <span class="label">High-volume Meta creative</span>
+  <h1>3–5 finished ads a day.<br>Under 24 hours.<br><em>No one to hire.</em></h1>
+  <p>A dedicated production pod on your account: operator, editor, QA. UGC, talking-head, AI and animation. Briefs in by evening, finished ads back the next day, every day. Hooks, pacing and retention are our job, not a note you leave us.</p>
+  <div class="row">
+    <div><b>&lt;24h</b><span>brief to finished ad</span></div>
+    <div><b>60+</b><span>ads a month, base</span></div>
+    <div><b>3 people</b><span>on your account</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="sh">
+    <div class="label">Why a pod</div>
+    <div><h2>One editor's budget. A whole team.</h2></div>
+  </div>
+  <div class="plan">
+    <div>
+      <h3>What you get</h3>
+      <ul>
+        <li><b>Daily drops.</b> <span>3–5 finished ads every working day, not a weekly dump.</span></li>
+        <li><b>Every format.</b> <span>AI UGC, talking-head, animation, B-roll, skits. Same team, same day.</span></li>
+        <li><b>Hook thinking built in.</b> <span>Each ad ships with multiple openers. We cut for the first 3 seconds.</span></li>
+        <li><b>Generation on us.</b> <span>No credits, no tools, no seats to buy.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>What you don't get</h3>
+      <ul>
+        <li><b>Sick days.</b> <span>Three people cover the account. Output doesn't stop.</span></li>
+        <li><b>Ramp time.</b> <span>The pipeline exists. First ads within 48 hours of your first brief.</span></li>
+        <li><b>A ceiling.</b> <span>5 a day becomes 8 a day without a second hire.</span></li>
+        <li><b>Management.</b> <span>One Slack channel, one weekly check-in. That's it.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">Work</div>
+    <div><h2>Live client work.</h2><p>Press play.</p></div>
+  </div>
+  <div class="reel">
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1YXmdHuic6YLCtrBsbK3RDeLQlUk-bEuK/preview" allow="autoplay; fullscreen" loading="lazy" title="Pixar story"></iframe></div><div class="cap">Pixar Story</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1vjgpAlncZnQcps6uQTOG76lglqgnJDi6/preview" allow="autoplay; fullscreen" loading="lazy" title="Claymation"></iframe></div><div class="cap">Claymation</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/16Mq3UXZ4Jb_b-1pko8wKGJ-u_Wkmrpt5/preview" allow="autoplay; fullscreen" loading="lazy" title="Pixar story"></iframe></div><div class="cap">Pixar Story</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1WiLGsy42m-QercmlkJDyjRdexA97UiU6/preview" allow="autoplay; fullscreen" loading="lazy" title="Pixar story"></iframe></div><div class="cap">Pixar Story</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1vF3OSYOKmYpNj097WVl7XzhD9JzkgAmw/preview" allow="autoplay; fullscreen" loading="lazy" title="Explainer"></iframe></div><div class="cap">Explainer</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1297d0OorNBQmUB6B63xVJJpL4fiCeK2K/preview" allow="autoplay; fullscreen" loading="lazy" title="Explainer"></iframe></div><div class="cap">Explainer</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1_eghVeNJvAAUsOKnd7dIAkdla4RrIlMs/preview" allow="autoplay; fullscreen" loading="lazy" title="Pixar story"></iframe></div><div class="cap">Pixar Story</div></div>
+    <div class="clip"><div class="frame"><iframe src="https://drive.google.com/file/d/1VsdtLADQPKLNwtrCSlzr5Df9DfquN5VX/preview" allow="autoplay; fullscreen" loading="lazy" title="Realistic UGC"></iframe></div><div class="cap">Realistic UGC</div></div>
+  </div>
+  <a class="more" href="https://drive.google.com/drive/folders/1uhMmhoptNttM77HRen_q9krx3zZLSyII" target="_blank" rel="noopener">Full portfolio →</a>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">Process</div>
+    <div><h2>Brief by evening. Ad by next day.</h2></div>
+  </div>
+  <div class="flow">
+    <div><span class="label">01</span><h3>Brief</h3><p>Your strategist drops briefs in the shared channel. Script, angle, references, product assets.</p></div>
+    <div><span class="label">02</span><h3>Production</h3><p>Generation, voice, edit, QA. Overnight on your clock.</p></div>
+    <div><span class="label">03</span><h3>Delivery</h3><p>Finished, ready-to-upload files plus raw clips. Multiple hook openers per ad.</p></div>
+    <div><span class="label">04</span><h3>Iterate</h3><p>Send us what's winning. New hooks and variations of it are in the next day's drop.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh">
+    <div class="label">Pricing</div>
+    <div><h2>A pod, not a headcount.</h2></div>
+  </div>
+  <div class="offer">
+    <div class="left">
+      <div class="label">Production pod</div>
+      <div class="price" style="margin-top:12px">$6,000<small>/ month</small></div>
+      <p class="sub">60 finished ads a month, delivered daily. That's $100 per ad, the rate you'd normally reach at high volume, from day one.</p>
+      <div class="month"><b>Extra ads: $100 each</b><span>Above 90 in a month: $90 each</span></div>
+    </div>
+    <div class="right">
+      <div class="spec">
+        <div class="lead"><span>Turnaround</span><span>Under 24 hours</span></div>
+        <div><span>Output</span><span>3–5 ads per working day</span></div>
+        <div><span>Formats</span><span>UGC · talking-head · AI · animation</span></div>
+        <div><span>Hook openers</span><span>Included, per ad</span></div>
+        <div><span>Revisions</span><span>1 round per ad, same day</span></div>
+        <div><span>Generation credits</span><span>On us</span></div>
+        <div><span>Raw clips</span><span>Included</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="addon">
+    <div class="left">
+      <div class="label">Optional add-on</div>
+      <h3>Creative strategy</h3>
+      <p>We write the briefs, not just cut them. Customer research, angle map, up to 80 concepts and scripts a month, weekly read on what's winning and why. Your team approves, we produce.</p>
+    </div>
+    <div class="right">
+      <div class="p">$2,500<small>/ month</small></div>
+      <p style="margin-top:10px">Up to 80 concepts / scripts a month. Cancel any month.</p>
+    </div>
+  </div>
+
+  <div class="terms">
+    <div><b>Month one</b><span>50% upfront, 50% two weeks later.</span></div>
+    <div><b>From month two</b><span>Pod billed at the start of the month; extras on delivery.</span></div>
+    <div><b>Payment</b><span>Remitly or PaySend while the US entity's EIN is pending, then standard invoicing.</span></div>
+    <div><b>Start</b><span>First ads within 48 hours of the first brief.</span></div>
+  </div>
+  <div class="next"><b>At scale:</b> once Meta spend passes $50K a month, creative strategy can move to 8% of spend on winning ads instead of the flat fee.</div>
+</section>
+
+<div class="close">
+  <div>
+    <h2>Send tomorrow's briefs.</h2>
+    <p>You'll have the first ads back before you've hired anyone.</p>
+  </div>
+  <a class="btn" href="mailto:bashar@blackcactus.agency?subject=GoodWatch%20%E2%80%94%20production%20pod">bashar@blackcactus.agency</a>
+</div>
+<footer><span>Black Cactus</span><span>Prepared for GoodWatch</span></footer>
+
+</div>
+</body>
+</html>
