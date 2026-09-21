@@ -67,6 +67,17 @@ section{padding:88px 0 0}
 .spec div span:first-child{color:var(--muted)}
 .spec div span:last-child{font-weight:600;text-align:right}
 .spec .lead span:last-child{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+.opts{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}
+.opt{padding:36px 32px 40px;display:grid;gap:22px;align-content:start;position:relative}
+.opt+.opt{border-left:1px solid var(--line)}
+.opt.best{background:var(--bg2)}
+.opt.best::before{content:"";position:absolute;inset:-1px -1px auto -1px;height:2px;background:var(--green)}
+.opt .top{display:flex;justify-content:space-between;align-items:center}
+.opt .rec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:700}
+.opt .price{font-size:clamp(44px,5.5vw,64px)}
+.opt .spec{border-top:1px solid var(--line)}
+.opt .spec div:first-child{padding-top:13px}
+.opt .note{font-size:14.5px;color:var(--muted);margin:0}
 .addon{margin-top:16px;border:1px solid var(--line);display:grid;grid-template-columns:1.1fr .9fr}
 .addon .left{padding:32px 36px;border-right:1px solid var(--line)}
 .addon .right{padding:32px 36px}
@@ -95,7 +106,8 @@ footer{margin-top:48px;display:flex;justify-content:space-between;font-size:12px
   .flow div{border-top:1px solid var(--line);padding:24px 0}
   .flow div+div{padding-left:0;border-left:0}
   .flow div:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}
-  .offer,.addon{grid-template-columns:1fr}
+  .offer,.addon,.opts{grid-template-columns:1fr}
+  .opt+.opt{border-left:0;border-top:1px solid var(--line)}
   .offer .left,.addon .left{border-right:0;border-bottom:1px solid var(--line)}
   .terms{grid-template-columns:1fr 1fr}
   .close{grid-template-columns:1fr}
@@ -127,14 +139,14 @@ footer{margin-top:48px;display:flex;justify-content:space-between;font-size:12px
   <div class="row">
     <div><b>200+</b><span>ads a month, current capacity</span></div>
     <div><b>Weekly</b><span>batch in, batch out</span></div>
-    <div><b>From 20</b><span>ads a month to start</span></div>
+    <div><b>From 25</b><span>ads a month to start</span></div>
   </div>
 </div>
 
 <section>
   <div class="sh">
     <div class="label">Why a pod</div>
-    <div><h2>Start at 20 a month. Scale to 200.</h2></div>
+    <div><h2>Start at 25 a month. Scale to 200.</h2></div>
   </div>
   <div class="plan">
     <div>
@@ -151,7 +163,7 @@ footer{margin-top:48px;display:flex;justify-content:space-between;font-size:12px
       <ul>
         <li><b>Sick days.</b> <span>Three people cover the account. Output doesn't stop.</span></li>
         <li><b>Ramp time.</b> <span>The pipeline exists. First batch back the week you send it.</span></li>
-        <li><b>A ceiling.</b> <span>20 a month becomes 200 a month on the same team.</span></li>
+        <li><b>A ceiling.</b> <span>25 a month becomes 200 a month on the same team.</span></li>
         <li><b>Management.</b> <span>One Slack channel, one weekly check-in. That's it.</span></li>
       </ul>
     </div>
@@ -192,26 +204,35 @@ footer{margin-top:48px;display:flex;justify-content:space-between;font-size:12px
 <section>
   <div class="sh">
     <div class="label">Pricing</div>
-    <div><h2>Per video. Cheaper as you grow.</h2></div>
+    <div><h2>Two ways to start.</h2><p>Same team, same output. Pick the volume that fits your budget now.</p></div>
   </div>
-  <div class="offer">
-    <div class="left">
-      <div class="label">Production</div>
-      <div class="price" style="margin-top:12px">$120<small>/ video</small></div>
-      <p class="sub">Minimum 20 videos a month ($2,400). Finished, ready-to-upload, hook openers included.</p>
-      <div class="month"><b>$100 / video from 50 a month</b><span>plus a dedicated editor pod on your account</span></div>
-    </div>
-    <div class="right">
+  <div class="opts">
+    <div class="opt">
+      <div class="top"><span class="label">Option A · Start</span></div>
+      <div class="price">$120<small>/ video</small></div>
       <div class="spec">
-        <div class="lead"><span>Delivery</span><span>Weekly batches</span></div>
-        <div><span>Capacity</span><span>50–60 concepts a week</span></div>
-        <div><span>Minimum</span><span>20 videos a month</span></div>
-        <div><span>Formats</span><span>UGC · talking-head · AI · animation</span></div>
-        <div><span>Hook openers</span><span>Included, per ad</span></div>
+        <div class="lead"><span>Minimum</span><span>25 videos / month</span></div>
+        <div><span>Monthly floor</span><span>$3,000</span></div>
+        <div><span>Delivery</span><span>Weekly batches</span></div>
+        <div><span>Hook openers</span><span>Included, per video</span></div>
         <div><span>Revisions</span><span>1 round per video</span></div>
         <div><span>Generation credits</span><span>On us</span></div>
-        <div><span>Raw clips</span><span>Included</span></div>
       </div>
+      <p class="note">Test the pipeline on your briefs. Move to Option B any month.</p>
+    </div>
+    <div class="opt best">
+      <div class="top"><span class="label">Option B · Scale</span><span class="rec">Best rate</span></div>
+      <div class="price">$100<small>/ video</small></div>
+      <div class="spec">
+        <div class="lead"><span>Minimum</span><span>50 videos / month</span></div>
+        <div><span>Monthly floor</span><span>$5,000</span></div>
+        <div><span>Delivery</span><span>Weekly batches</span></div>
+        <div><span>Hook openers</span><span>Included, per video</span></div>
+        <div><span>Revisions</span><span>1 round per video</span></div>
+        <div><span>Generation credits</span><span>On us</span></div>
+        <div><span>Your own editor pod</span><span>Included</span></div>
+      </div>
+      <p class="note">A dedicated editing team on your account. Capacity to 200+ a month on the same rate.</p>
     </div>
   </div>
 
@@ -229,11 +250,11 @@ footer{margin-top:48px;display:flex;justify-content:space-between;font-size:12px
 
   <div class="terms">
     <div><b>Month one</b><span>50% upfront, 50% two weeks later.</span></div>
-    <div><b>From month two</b><span>Monthly minimum billed at the start of the month; anything above it on delivery.</span></div>
+    <div><b>From month two</b><span>Monthly minimum billed at the start of the month; anything above it at the same rate, on delivery.</span></div>
     <div><b>Payment</b><span>Remitly or PaySend while the US entity's EIN is pending, then standard invoicing.</span></div>
     <div><b>Start</b><span>First batch back the week you send it.</span></div>
   </div>
-  <div class="next"><b>We scale with you.</b> At 50 videos a month you get your own editor pod. At 100+ we add a second. Capacity today is 200+ a month, so there is no ceiling to plan around.</div>
+  <div class="next"><b>We scale with you.</b> Cross 50 in any month and the $100 rate applies to that whole month. At 100+ we add a second editor pod. Capacity today is 200+ a month.</div>
 </section>
 
 <div class="close">
